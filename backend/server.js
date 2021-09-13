@@ -47,11 +47,11 @@ app.use('/api/category', category);
 app.use('/api/company', company);
 app.use('/api/employer', employer);
 
-if (process.env.NOD_ENV === 'production') {
-  app.use(express.static('client/build'))
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname,'client','build','index.html'))
-  })
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
 }
 
 const port = process.env.PORT;
