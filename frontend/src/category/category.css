@@ -1,0 +1,40 @@
+.l{
+    color: white;
+}
+.ta{
+    width: 100%;
+}
+
+.b{
+    margin-top:100px ;
+    min-height: 78vh;
+}
+.success-message{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    background: rgba(141, 189, 69,0.15);
+    color: green;
+    margin: 7px 0;
+}
+.success-message i{
+margin-right: 3px;
+}
+
+.err-message{
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(189, 97, 69, 0.15);
+    color: red;
+    margin: 5px 0;
+}
+.err-message i{
+margin-right: 5px;
+}
