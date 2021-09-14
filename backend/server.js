@@ -31,7 +31,7 @@ app.use(
     secret: process.env.SESSION,
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 600 },
+    cookie: { maxAge: 600 }, 
   })
 );
 app.use(cookieParser(process.env.SESSION));
@@ -48,7 +48,7 @@ app.use('/api/company', company);
 app.use('/api/employer', employer);
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static('frontend/build'));    
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
   });

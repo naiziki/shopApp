@@ -37,17 +37,17 @@ const Navbar = ({ click, setcaty, category }) => {
                                 </div>
                                 <div>
 
-                                    {category.filter((el, index) => index % 2 === 0)
+                                    {category !== undefined && category.filter((el, index) => index % 2 === 0)
                                         .map((el, index) => <div key={index}> <Link to="/" className="link" onClick={() => { setcaty(el.category) }}>{el.category.toUpperCase()} </Link></div>)
                                     }
                                 </div>
                                 <div>
-                                    {category.filter((el, index) => index % 2 !== 0)
+                                    {category !== undefined && category.filter((el, index) => index % 2 !== 0)
                                         .map((el, index) => <div key={index}> <Link to="/" className="link" onClick={() => { setcaty(el.category) }}>{el.category.toUpperCase()} </Link></div>)
                                     }
                                 </div>
                                 <div>
-                                    < Slider products={category} ind={category.length } caty={true} setcaty={setcaty} />
+                                    {category !== undefined && <   Slider products={category} ind={category.length} caty={true} setcaty={setcaty} />}
                                 </div>
                             </div>
                         </div>
@@ -60,15 +60,15 @@ const Navbar = ({ click, setcaty, category }) => {
                 </li>
                 <li>
                     <Link to="/cart" className="cart__link" >
-                    <i className="fas fa-shopping-cart"></i>
-                        <span  className="adj" >
+                        <i className="fas fa-shopping-cart"></i>
+                        <span className="adj" >
                             Cart
                             <span className="cartlogo__badge">{getCartCount()}</span>
                         </span>
                     </Link>
                 </li>
             </ul>
-            <div className="hamburger__menu" onClick={ path !=="/login"?  click : ()=> console.log("login page")}>
+            <div className="hamburger__menu" onClick={path !== "/login" ? click : () => console.log("login page")}>
                 <div></div>
                 <div></div>
                 <div></div>
