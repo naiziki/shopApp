@@ -61,13 +61,13 @@ const Company = () => {
                     <Marker position={position} icon={duckIcon('/Gimage/red_marker.png', 40, 30)} >
                         <Popup > you are her</Popup>
                     </Marker>
-                    <Marker position={[31.6233775, -9.0636727]} icon={duckIcon('/Gimage/b_marker.png', 30, 25)}  >
+                    <Marker position={[31.6233775, -8.0636727]} icon={duckIcon('/Gimage/b_marker.png', 30, 25)}  >
                         <Popup>A v r n i k h</Popup>
                     </Marker>
                 </>
             )
     }
-    return ((employer === "" || videourl === "")
+    return ((employer === "" && videourl === "")
         ? < Loadingpopup />
         : <div>
             <div className="map">
