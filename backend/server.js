@@ -14,6 +14,8 @@ const company = require('./routes/company');
 const employer = require("./routes/employer")
 const path = require('path')
 
+
+
 const app = express();
 require('dotenv').config();
 
@@ -50,11 +52,11 @@ app.use('/api/employer', employer);
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('frontend/build'));    
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));
   });
 }
 
-const port = process.env.PORT;
+const port = process.env.PORT || 2351;  
 app.listen(port, () => {
   console.log(`server running on port ${port}`)
 })
