@@ -2,7 +2,7 @@
     width:100%;
     display:flex;
     justify-content:space-between;
-    align-items: center;
+    align-items: center;  
    padding: 0.5rem 2.5rem;
     z-index: 50;
 }
@@ -54,6 +54,7 @@
 .cart__link:hover{
     background: #fff;
     color:#000;
+    transform: translateY(10px);
 }
 .cartlogo__badge{
     width:20px;
